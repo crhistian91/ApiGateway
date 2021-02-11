@@ -11,7 +11,7 @@
 |
 */
 
-$router->group(['middleware' => 'client.credentials'], function () use ($router) {
+// $router->group(['middleware' => 'client.credentials'], function () use ($router) {
     /**
      * Usuarios routes
      */
@@ -41,11 +41,11 @@ $router->group(['middleware' => 'client.credentials'], function () use ($router)
     $router->put('/users/{user}', 'UserController@update');
     $router->patch('/users/{user}', 'UserController@update');
     $router->delete('/users/{user}', 'UserController@destroy');
-});
+// });
 
 /**
  * ruta protec para usuarios logueados
  */
-$router->group(['middleware' => 'auth:api'], function () use ($router) {
+/*$router->group(['middleware' => 'auth:api'], function () use ($router) {
     $router->get('/users/me', 'UserController@me');
-});
+});*/
