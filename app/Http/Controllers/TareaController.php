@@ -50,7 +50,7 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->usuarioService->obtainAuthor($request->usuario_id);
+        $this->usuarioService->obtainUsuario($request->usuario_id);
 
         return $this->successResponse($this->tareaService->createTarea($request->all()), Response::HTTP_CREATED);
     }
